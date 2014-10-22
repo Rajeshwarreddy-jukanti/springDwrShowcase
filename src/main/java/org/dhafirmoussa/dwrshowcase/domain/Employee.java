@@ -17,8 +17,8 @@ public class Employee implements Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * Unique EMployee Id (normally automatically generated)
-     */
+	 * Unique Employee Id (normally automatically generated)
+	 */
     private Integer id;
 
     private String firstName;
@@ -42,7 +42,7 @@ public class Employee implements Serializable {
      * @param id
      *            The id to set.
      */
-    public void setId(Integer id) {
+    public void setId(final Integer id) {
         this.id = id;
     }
 
@@ -61,7 +61,7 @@ public class Employee implements Serializable {
      * @param firstName
      *            The firstName to set.
      */
-    public void setFirstName(String firstName) {
+    public void setFirstName(final String firstName) {
         this.firstName = firstName;
     }
 
@@ -80,7 +80,7 @@ public class Employee implements Serializable {
      * @param lastName
      *            The lastName to set.
      */
-    public void setLastName(String lastName) {
+    public void setLastName(final String lastName) {
         this.lastName = lastName;
     }
 
@@ -99,7 +99,7 @@ public class Employee implements Serializable {
      * @param department
      *            The department to set.
      */
-    public void setDepartment(Department department) {
+    public void setDepartment(final Department department) {
         this.department = department;
     }
 

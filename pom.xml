@@ -77,15 +77,14 @@
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>
-		<!-- 
+		 
 		<dependency>
 			<groupId>org.directwebremoting</groupId>
 			<artifactId>dwr</artifactId>
 			<version>3.0.M1</version>
-			<type>jar</type>
-			<scope>compile</scope>
 		</dependency>
-		 -->
+
+		
 	</dependencies>
 	<build>
 		<finalName>SpringDwrShowcase</finalName>

@@ -73,9 +73,9 @@ public class DwrEmployeeController {
 
 		// Retrieve employee with matching id then return it as a payload of the
 		// Response type.
-		Response<Employee> response = new Response<>();
+		final Response<Employee> response = new Response<>();
 
-		Employee employee = this.employeeService.get(id);
+		final Employee employee = this.employeeService.get(id);
 
 		if (employee != null) {
 			// found employee. We just set it as the payload
@@ -89,8 +89,7 @@ public class DwrEmployeeController {
 
 		// return the expected response.
 		// Note that this response could hold the requested employee if it was
-		// successfully found, or
-		// an error status and message to say why.
+		// successfully found, or an error status and message to say why.
 		return response;
 
 	}
@@ -105,7 +104,7 @@ public class DwrEmployeeController {
 		DwrEmployeeController.logger
 				.debug("Received request to update employee");
 
-		Response<Employee> response = new Response<>();
+		final Response<Employee> response = new Response<>();
 
 		// validate the object can be saved
 		if (employee.isValid()) {
@@ -113,8 +112,8 @@ public class DwrEmployeeController {
 			// Delegate to EmployeeService for saving.
 			response.setData(this.employeeService.save(employee));
 		} else {
-			// - invalid employee to save. Set the response status and give a
-			// proper messsage.
+			// invalid employee to save. Set the response status and give a
+			// proper message.
 			response.setStatus(Status.ERROR);
 			response.setMessage("Invalid employee properties.");
 		}

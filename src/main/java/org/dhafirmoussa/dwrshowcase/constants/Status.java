@@ -12,7 +12,7 @@ import org.directwebremoting.annotations.DataTransferObject;
  * @date 02/06/2014
  */
 // DWR will discover this Enum and will knwo to create an enum converter for it.
-@DataTransferObject(type = "enum")
+@DataTransferObject
 public enum Status {
     SUCCESS, WARNING, ERROR, INFO;
 }
